@@ -42,8 +42,8 @@ function App() {
   
           // Parse JSON data from the API response
           const data = await response.json();
-          // Filter parks for valid images
-          const validParks = data.data.filter((park: Park) => park.images && park.images.length > 0);
+          // Filter parks for valid images and 3 activities
+          const validParks = data.data.filter((park: Park) => park.images && park.images.length > 0 && park.activities.length > 2);
   
           // Update totalFetched with the number of parks fetched in the current batch
           totalFetched += data.data.length;
