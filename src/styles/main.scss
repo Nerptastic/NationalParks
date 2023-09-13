@@ -1,0 +1,45 @@
+@import 'breakpoints';
+@import 'variables';
+@import 'header';
+@import 'hero';
+@import 'card';
+@import 'footer';
+
+
+body {
+  font-family: $font-stack;
+  line-height: 1.5;
+  color: $light;
+  background-color: $dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  margin: 0;
+  font-size: 1rem;
+}
+
+.park-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@include breakpoint(mobile-lg) {
+  .park-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@include breakpoint(desktop) {
+  .park-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,56 @@
+@import 'breakpoints';
+@import 'variables';
+
+.park-card {
+  background-color: $darker;
+  border-radius: 4px;
+  filter: drop-shadow(5px 5px 10px $darker);
+
+  h2 {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    color: $light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 240px;
+  }
+}
+
+.park-info {
+  padding: 20px;
+
+  button {
+    cursor: pointer;
+    padding: 6px 20px;
+    background-color: $green;
+    color: $darker;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+  }
+
+  ul {
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+}
+
+.truncated-description {
+  margin-top: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
