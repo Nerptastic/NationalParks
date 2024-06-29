@@ -32,7 +32,7 @@ function App() {
         try {
           // Fetch the parks
           const response = await fetch(
-            `https://developer.nps.gov/api/v1/parks?stateCode=CA&limit=${parksPerBatch}&start=${totalFetched}&api_key=${import.meta.env.VITE_NPS_API_KEY}`
+            `https://developer.nps.gov/api/v1/parks?stateCode=CA&limit=${parksPerBatch}&start=${totalFetched}&api_key=${import.meta.env.NPS_API}`
           );
   
           // Throw error for unsuccessful API response
